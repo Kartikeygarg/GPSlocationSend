@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.defenselabs.gpslocationsend.Test_send">
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="205dp"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+        android:hint="dstAddress" />
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="dstPort"
+        android:inputType="number"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/address"
+        android:visibility="visible"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="HEIGHT :  "
+    android:textSize="18dp"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/port"
+    android:id="@+id/height"
+    />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:ems="2"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/height"
+        android:layout_below="@+id/port"
+        android:id="@+id/txt_height"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time(sec) : "
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/txt_height"
+        android:layout_alignBottom="@+id/height"
+        android:id="@+id/SleepTime"
+        android:layout_marginLeft="40dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textAlignment="center"
+        android:ems="2"
+        android:inputType="number"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/SleepTime"
+        android:layout_alignBottom="@+id/txt_height"
+        android:id="@+id/txt_sleepTime"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_send"
+        android:layout_below="@+id/txt_sleepTime"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFFEST LATITUDE (mtrs):  "
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/text_send"
+        android:id="@+id/latitude"
+        android:textSize="18dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:ems="3"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/latitude"
+        android:layout_alignBottom="@+id/latitude"
+        android:id="@+id/txt_latitude"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFFSET LONGITUDE (mtrs):  "
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txt_latitude"
+        android:id="@+id/longitude"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textAlignment="center"
+        android:inputType="numberSigned"
+        android:ems="3"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/longitude"
+        android:layout_below="@+id/txt_latitude"
+        android:id="@+id/txt_longitude"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND Repeated Co-ordinates"
+        android:id="@+id/btn_send"
+        android:layout_below="@+id/longitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Side of Square (mtrs):  "
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/btn_send"
+        android:id="@+id/txt_square_side"
+        android:textSize="18dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:ems="2"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/txt_square_side"
+        android:layout_alignBaseline="@+id/txt_square_side"
+        android:id="@+id/editText_square_side"
+        />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/point"
+        android:layout_below="@+id/txt_square_side"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/img_center" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@+id/img_center"
+        android:layout_alignTop="@+id/img_center"
+        android:id="@+id/btn_rightUp"
+        />
+
+
+    <Button
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_toRightOf="@+id/img_center"
+    android:layout_alignBottom="@+id/img_center"
+        android:id="@+id/btn_rightDown"/>
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/img_center"
+        android:layout_alignTop="@+id/img_center"
+        android:id="@+id/btn_leftUp"
+        />
+
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+       android:layout_toLeftOf="@+id/img_center"
+        android:layout_alignBottom="@+id/img_center"
+        android:id="@+id/btn_leftDown"/>
+
+
+
+</RelativeLayout>
